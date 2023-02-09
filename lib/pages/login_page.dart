@@ -30,7 +30,7 @@ class _LoginPageState extends State<LoginPage>{
           children: [
             Container(
               height: _headerHeight,
-              child: HeaderWidget(_headerHeight, true, Icons.login_rounded), //let's create a common header widget
+              child: HeaderWidget(_headerHeight, true, Icons.login_rounded), 
             ),
             SafeArea(
               child: Container( 
@@ -86,7 +86,7 @@ class _LoginPageState extends State<LoginPage>{
                                   child: Text('Sign In'.toUpperCase(), style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),),
                                 ),
                                 onPressed: (){
-                                  //After successful login we will redirect to profile page. Let's create profile page now
+                                  //After successful login we will redirect to profile.
                                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ProfilePage()));
                                 },
                               ),
@@ -97,7 +97,7 @@ class _LoginPageState extends State<LoginPage>{
                               child: Text.rich(
                                 TextSpan(
                                   children: [
-                                    TextSpan(text: "Don\'t have an account? "),
+                                    TextSpan(text: "Don't have an account? "),
                                     TextSpan(
                                       text: 'Create',
                                       recognizer: TapGestureRecognizer()
