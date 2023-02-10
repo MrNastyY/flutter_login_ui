@@ -15,7 +15,7 @@ class LoginUiApp extends StatelessWidget {
   // Color _primaryColor= HexColor('#FFC867');
   // Color _accentColor= HexColor('#FF3CBD');
 
-  // This widget is the root of our application.
+ 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
