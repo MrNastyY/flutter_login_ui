@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+//import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_login_ui/pages/login_page.dart';
@@ -134,6 +134,24 @@ class _ProfilePageState extends State<ProfilePage> {
                           builder: (context) => SplashScreen(title: "Graph")));
                 },
               ),
+                 ListTile(
+                leading: Icon(Icons.home_max_rounded,
+                    size: _drawerIconSize,
+                    color: Theme.of(context).accentColor),
+                title: Text(
+                  'My Dashboard',
+                  style: TextStyle(
+                      fontSize: _drawerFontSize,
+                      color: Theme.of(context).accentColor),
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+                  );
+                },
+              ),
+              
               ListTile(
                 leading: Icon(Icons.calendar_month_rounded,
                     size: _drawerIconSize,
@@ -156,11 +174,11 @@ class _ProfilePageState extends State<ProfilePage> {
                 height: 1,
               ),
               ListTile(
-                leading: Icon(Icons.person_add_alt_1,
+                leading: Icon(Icons.chat_bubble_outline_rounded,
                     size: _drawerIconSize,
                     color: Theme.of(context).accentColor),
                 title: Text(
-                  'Registration Page',
+                  'Secret chat space',
                   style: TextStyle(
                       fontSize: _drawerFontSize,
                       color: Theme.of(context).accentColor),
@@ -183,7 +201,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   color: Theme.of(context).accentColor,
                 ),
                 title: Text(
-                  'Forgot Password Page',
+                  'Forgot Password',
                   style: TextStyle(
                       fontSize: _drawerFontSize,
                       color: Theme.of(context).accentColor),
@@ -217,6 +235,23 @@ class _ProfilePageState extends State<ProfilePage> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => ForgotPasswordVerificationPage()),
+                  );
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.settings,
+                    size: _drawerIconSize,
+                    color: Theme.of(context).accentColor),
+                title: Text(
+                  'Settings',
+                  style: TextStyle(
+                      fontSize: _drawerFontSize,
+                      color: Theme.of(context).accentColor),
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
                   );
                 },
               ),
